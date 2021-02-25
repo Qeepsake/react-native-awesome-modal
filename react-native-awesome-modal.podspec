@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.source_files  = "ios/**/*.{h,m,swift}"
 
   s.dependency 'React'
-  s.dependency 'react-native-safe-area', :path => '../node_modules/react-native-safe-area'
+  s.dependency 'react-native-safe-area'
 end
 
