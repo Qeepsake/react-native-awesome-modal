@@ -8,7 +8,7 @@ target 'AwesomeModal' do
 
   use_react_native!(:path => config["reactNativePath"])
 
-  pod 'react-native-safe-area', :path => '../node_modules/react-native-safe-area'
+  pod 'react-native-safe-area', :path => './node_modules/react-native-safe-area'
 end
 
 
