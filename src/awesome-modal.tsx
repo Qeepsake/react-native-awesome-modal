@@ -1,6 +1,7 @@
 /* NPM - Modules imported via NPM */
 import _get from 'lodash/get'
-import React, { RefObject } from 'react'
+import * as React from 'react'
+import { RefObject } from 'react'
 import {
   Animated,
   Dimensions,

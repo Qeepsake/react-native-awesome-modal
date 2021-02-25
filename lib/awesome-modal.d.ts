@@ -1,4 +1,5 @@
-import React, { RefObject } from 'react';
+import * as React from 'react';
+import { RefObject } from 'react';
 import { Animated, ScrollView, StyleProp, ViewStyle } from 'react-native';
 import { SafeAreaInsets } from 'react-native-safe-area';
 declare type EdgeInsets = {
@@ -12,7 +13,7 @@ interface IState {
     deviceHeight: number;
     overlayIsVisible: boolean;
 }
-interface IProps {
+export interface IProps {
     enableScroll?: boolean;
     hasTabBar?: boolean;
     overflowShow?: boolean;

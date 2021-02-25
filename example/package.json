@@ -21,7 +21,7 @@
     "eslint": "^6.5.1",
     "jest": "^25.1.0",
     "metro-react-native-babel-preset": "^0.59.0",
-    "react-native-awesome-modal": "^0.0.2",
+    "react-native-awesome-modal": "https://github.com/aspect-apps/react-native-awesome-modal.git",
     "react-test-renderer": "16.13.1"
   },
   "jest": {
