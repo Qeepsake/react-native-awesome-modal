@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "jsx": "react-native",
+    "lib": ["ESNext", "es5", "es6", "dom", "dom.iterable"],
+    "module": "CommonJS",
+    "noEmitOnError": true,
+    "outDir": "./lib",
+    "sourceMap": true,
+    "strict": true,
+    "target": "ESNext",
+    "allowJs": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["**/__tests__/*", "node_modules"],
+  "include": ["src"],
+  "paths": {
+    "react-native-awesome-modal": ["../src"]
+  },
+}

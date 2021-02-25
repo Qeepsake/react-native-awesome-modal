@@ -1,0 +1,26 @@
+{
+  "projectName": "react-native-awesome-modal",
+  "projectOwner": "Aspect Apps",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": true,
+  "commitConvention": "eslint",
+  "contributors": [
+    {
+      "login": "Denise-Ng",
+      "name": "Denise-Ng",
+      "avatar_url": "https://avatars.githubusercontent.com/u/50568634?v=4",
+      "profile": "https://github.com/Denise-Ng",
+      "contributions": [
+        "code",
+        "doc",
+        "example"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7
+}

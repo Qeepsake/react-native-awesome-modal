@@ -1,0 +1,62 @@
+{
+  "name": "react-native-awesome-modal",
+  "version": "0.0.1",
+  "description": "An in-built navigator to simplify embedded navigation flows.",
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "files": [
+    "android",
+    "ios",
+    "lib",
+    "!.DS_Store",
+    "!.gradle",
+    "!.idea",
+    "!build",
+    "!gradle",
+    "!*.iml",
+    "!gradlew",
+    "!gradlew.bat",
+    "!local.properties",
+    "!project.xcworkspace",
+    "!xcshareddata",
+    "!xcuserdata"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aspect-apps/react-native-awesome-modal.git"
+  },
+  "keywords": [
+    "react",
+    "native"
+  ],
+  "author": "Denise",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aspect-apps/react-native-awesome-modal/issues"
+  },
+  "homepage": "https://github.com/aspect-apps/react-native-awesome-modal#readme",
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "@types/lodash": "^4.14.168",
+    "@types/react": "^16.9.1",
+    "@types/react-native": "^0.60.4",
+    "all-contributors-cli": "^6.20.0",
+    "eslint": "^7.19.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "metro-react-native-babel-preset": "^0.65.0",
+    "react": "^16.9.0",
+    "react-native": "^0.60.4",
+    "typescript": "^3.8.3"
+  },
+  "np": {
+    "yarn": false
+  },
+  "dependencies": {
+    "react-native-safe-area": "^0.5.1"
+  }
+}
