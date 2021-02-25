@@ -1,7 +1,7 @@
 {
   "name": "react-native-awesome-modal",
-  "version": "0.0.1",
-  "description": "An in-built navigator to simplify embedded navigation flows.",
+  "version": "0.0.2",
+  "description": "A flexible and reusable modal.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [

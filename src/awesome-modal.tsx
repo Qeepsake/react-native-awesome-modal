@@ -27,7 +27,7 @@ interface IState {
   overlayIsVisible: boolean
 }
 
-interface IProps {
+export interface IProps {
   enableScroll?: boolean
   hasTabBar?: boolean
   overflowShow?: boolean
@@ -51,7 +51,7 @@ interface DefaultProps {
 
 type PropsWithDefaults = IProps & DefaultProps
 
-export default class AwesomeModal extends React.Component<IProps, IState> {
+export class AwesomeModal extends React.Component<IProps, IState> {
   scrollViewRef: RefObject<ScrollView>
 
   static defaultProps = {

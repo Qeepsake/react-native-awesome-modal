@@ -4,7 +4,7 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "jsx": "react-native",
-    "lib": ["ESNext", "es5", "es6", "dom", "dom.iterable"],
+    "lib": ["ESNext"],
     "module": "CommonJS",
     "noEmitOnError": true,
     "outDir": "./lib",
@@ -13,11 +13,10 @@
     "target": "ESNext",
     "allowJs": true,
     "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true
   },
-  "exclude": ["**/__tests__/*", "node_modules"],
+  "exclude": ["**/__tests__/*"],
   "include": ["src"],
   "paths": {
-    "react-native-awesome-modal": ["../src"]
+    "react-native-subset-navigator": ["../src"]
   },
 }

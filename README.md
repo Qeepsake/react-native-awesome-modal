@@ -67,7 +67,7 @@ The props below are used to configure and style the modal.
 | modalContainerStyle | StyleProp<ViewStyle> | Yes | See awesome-modal.tsx      | The modal's container style.                                     |   
 | modalInnerContainerStyle | StyleProp<ViewStyle> | Yes | See awesome-modal.tsx      | The modal's content container style.                        |   
 | modalOverlayStyle | StyleProp<ViewStyle>        | Yes       | See awesome-modal.tsx      | The modal's overlay style (i.e the translucent overlay behind the modal).  |   
-| modalRef            | ReactElement: React.Component | undefined => void | Yes | | The modal's ref to control the modal from the parent component.|   
+| modalRef            | ReactElement: React.Component | undefined => void | Yes |  | The modal's ref to control the modal from the parent component.|   
 
 
 
