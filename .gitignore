@@ -21,7 +21,6 @@ DerivedData
 *.ipa
 *.xcuserstate
 project.xcworkspace
-*.podspec
 
 # Android/IntelliJ
 #
