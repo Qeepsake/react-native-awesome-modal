@@ -51,12 +51,10 @@
     "metro-react-native-babel-preset": "^0.65.0",
     "react": "^16.9.0",
     "react-native": "^0.60.4",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "react-native-safe-area": "^0.5.1"
   },
   "np": {
     "yarn": false
-  },
-  "dependencies": {
-    "react-native-safe-area": "^0.5.1"
   }
 }
