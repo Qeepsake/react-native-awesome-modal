@@ -105,11 +105,14 @@ export class AwesomeModal extends React.Component<IProps, IState> {
   }
 
   componentDidUpdate(prevProps: IProps, prevState: IState) {
-    if (prevState.modalHeight !== this.state.modalHeight) {
-      this.onModalHeightChange()
+    if (
+      prevState.modalHeight !== this.state.modalHeight ||
+      prevProps !== this.props
+    ) {
       SafeArea.getSafeAreaInsetsForRootView().then((insets) => {
         this.onSafeAreaInsetsForRootViewChange(insets)
       })
+      this.onModalHeightChange()
     }
   }
 
@@ -260,7 +263,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     }
 
     const defaultModalOverlayStyle = {
-      position: '',
+      position: 'absolute',
       top: 0,
       bottom: 0,
       right: 0,
