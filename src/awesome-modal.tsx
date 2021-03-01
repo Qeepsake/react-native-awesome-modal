@@ -32,6 +32,7 @@ export interface IProps {
   enableScroll?: boolean
   hasTabBar?: boolean
   overflowShow?: boolean
+  closeOnPressOutside?: boolean
   modalBottomMargin?: number
   onClose?: () => void
   onPressOutside?: () => void
@@ -47,6 +48,7 @@ interface DefaultProps {
   enableScroll: boolean
   hasTabBar: boolean
   overflowShow: boolean
+  closeOnPressOutside: boolean
   modalBottomMargin: number
 }
 
@@ -59,6 +61,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     enableScroll: false,
     hasTabBar: false,
     overflowShow: false,
+    closeOnPressOutside: true,
     modalBottomMargin: 45,
   }
 
@@ -134,12 +137,13 @@ export class AwesomeModal extends React.Component<IProps, IState> {
    * outside the modal
    */
   onTouchOutside() {
-    const { onPressOutside } = this.props
+    const { onPressOutside, closeOnPressOutside } = this.props
     const { close } = this
     if (onPressOutside) {
       onPressOutside()
-      close()
-    } else {
+    }
+
+    if (closeOnPressOutside) {
       close()
     }
   }

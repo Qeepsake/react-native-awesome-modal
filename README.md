@@ -61,6 +61,7 @@ The props below are used to configure and style the modal.
 | enableScroll        | boolean       | Yes       | false   | Container of the modal's content will be a ScrollView instead of a View if set to true.|
 | hasTabBar           | boolean       | Yes       | false   | Whether the app has a tab bar (i.e. requires bottom padding for the modal)           |
 | overflowShow        | boolean       | Yes       | false   | Whether to show overflown elements.                                                  |
+| closeOnPressOutside | boolean       | Yes       | true   | Whether to close the modal on press outside of it                                                  |
 | modalBottomMargin   | number        | Yes       | 45      | The bottom margin of modal.                                                          |
 | onClose             | () => void    | Yes       |         | Function to call when the modal closes.                                              |
 | onPressOutside      | () => void    | Yes       |         | Function to call when the user presses outside of the modal.                         |
