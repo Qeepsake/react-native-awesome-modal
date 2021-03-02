@@ -17,6 +17,7 @@ export interface IProps {
     enableScroll?: boolean;
     hasTabBar?: boolean;
     overflowShow?: boolean;
+    closeOnPressOutside?: boolean;
     modalBottomMargin?: number;
     onClose?: () => void;
     onPressOutside?: () => void;
@@ -31,6 +32,7 @@ export declare class AwesomeModal extends React.Component<IProps, IState> {
         enableScroll: boolean;
         hasTabBar: boolean;
         overflowShow: boolean;
+        closeOnPressOutside: boolean;
         modalBottomMargin: number;
     };
     constructor(props: IProps);
