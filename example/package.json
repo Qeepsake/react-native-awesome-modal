@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@types/react": "^16.14.4",
+    "@types/react-native": "^0.63.50",
     "react": "16.13.1",
     "react-native": "0.63.4"
   },

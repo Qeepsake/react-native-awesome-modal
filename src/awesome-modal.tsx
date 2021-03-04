@@ -39,7 +39,7 @@ export interface IProps {
   modalContainerStyle?: StyleProp<ViewStyle>
   modalInnerContainerStyle?: StyleProp<ViewStyle>
   modalOverlayStyle?: StyleProp<ViewStyle>
-  modalRef?: (ReactElement: React.Component | undefined) => void
+  modalRef?: (ref: AwesomeModal | undefined) => void
 }
 
 // To eliminate TypeScript's "Prop may be undefined error"
