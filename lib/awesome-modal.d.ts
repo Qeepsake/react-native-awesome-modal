@@ -24,7 +24,7 @@ export interface IProps {
     modalContainerStyle?: StyleProp<ViewStyle>;
     modalInnerContainerStyle?: StyleProp<ViewStyle>;
     modalOverlayStyle?: StyleProp<ViewStyle>;
-    modalRef?: (ReactElement: React.Component | undefined) => void;
+    modalRef?: (ref: AwesomeModal | undefined) => void;
 }
 export declare class AwesomeModal extends React.Component<IProps, IState> {
     scrollViewRef: RefObject<ScrollView>;
