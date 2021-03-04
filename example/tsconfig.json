@@ -20,7 +20,4 @@
     "node_modules",       
     "babel.config.js",
   ],
-  "paths": {
-    "react-native-awesome-modal": ["../lib"]
-  },
 }
