@@ -7,7 +7,7 @@ target 'example' do
   config = use_native_modules!
 
   use_react_native!(:path => config["reactNativePath"])
-  pod 'react-native-safe-area', path: '../node_modules/react-native-safe-area'
+  # pod 'react-native-safe-area', path: '../node_modules/react-native-safe-area'
   
   target 'exampleTests' do
     inherit! :complete
