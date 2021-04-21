@@ -13,6 +13,7 @@
     "target": "ESNext",
     "allowJs": true,
     "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "exclude": ["**/__tests__/*"],
   "include": ["src"],

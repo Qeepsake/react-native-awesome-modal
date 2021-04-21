@@ -69,12 +69,16 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     super(props)
 
     const deviceHeight = Dimensions.get('window').height
+
+    const yPositionBottomMargin =
+      Platform.OS === 'android' ? (props.hasTabBar ? 67 : 25) : 0
+
     /** State */
     this.state = {
       modalHeight: 0,
       opacityAnimation: new Animated.Value(0),
       translateYAnimation: new Animated.Value(deviceHeight * -1.5),
-      modalYPosition: 0,
+      modalYPosition: props.modalBottomMargin ?? 0 + yPositionBottomMargin,
       deviceHeight: deviceHeight,
       overlayIsVisible: true,
     }
