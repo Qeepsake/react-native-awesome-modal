@@ -290,7 +290,6 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     const defaultModalContainerStyle = {
       backgroundColor: 'white',
       paddingVertical: 50,
-      paddingHorizontal: 30,
       alignSelf: 'center',
       height: 'auto',
       width: '90%',
@@ -303,6 +302,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
 
     const defaultModalInnerContainerStyle = {
       backgroundColor: 'white',
+      paddingHorizontal: 30,
     }
 
     const viewProps: ViewProps = {
