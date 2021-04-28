@@ -40,6 +40,7 @@ export interface IProps {
   modalInnerContainerStyle?: StyleProp<ViewStyle>
   modalOverlayStyle?: StyleProp<ViewStyle>
   modalRef?: (ref: AwesomeModal | undefined) => void
+  isCentered?: boolean
 }
 
 // To eliminate TypeScript's "Prop may be undefined error"
@@ -50,9 +51,12 @@ interface DefaultProps {
   overflowShow: boolean
   closeOnPressOutside: boolean
   modalBottomMargin: number
+  isCentered: boolean
 }
 
 type PropsWithDefaults = IProps & DefaultProps
+
+const DEVICE_HEIGHT = Dimensions.get('window').height
 
 export class AwesomeModal extends React.Component<IProps, IState> {
   scrollViewRef: RefObject<ScrollView>
@@ -63,12 +67,11 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     overflowShow: false,
     closeOnPressOutside: true,
     modalBottomMargin: 45,
+    isCentered: false,
   }
 
   constructor(props: IProps) {
     super(props)
-
-    const deviceHeight = Dimensions.get('window').height
 
     const yPositionBottomMargin =
       Platform.OS === 'android' ? (props.hasTabBar ? 67 : 25) : 0
@@ -77,9 +80,9 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     this.state = {
       modalHeight: 0,
       opacityAnimation: new Animated.Value(0),
-      translateYAnimation: new Animated.Value(deviceHeight * -1.5),
+      translateYAnimation: new Animated.Value(DEVICE_HEIGHT * -1.5),
       modalYPosition: props.modalBottomMargin ?? 0 + yPositionBottomMargin,
-      deviceHeight: deviceHeight,
+      deviceHeight: DEVICE_HEIGHT,
       overlayIsVisible: true,
     }
 
@@ -205,7 +208,9 @@ export class AwesomeModal extends React.Component<IProps, IState> {
           useNativeDriver: true,
         }),
         Animated.spring(translateYAnimation, {
-          toValue: modalYPosition,
+          toValue: this.props.isCentered
+            ? (DEVICE_HEIGHT - modalHeight) / 2
+            : modalYPosition,
           useNativeDriver: false,
         }),
       ]).start()
@@ -285,7 +290,6 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     const defaultModalContainerStyle = {
       backgroundColor: 'white',
       paddingVertical: 50,
-      paddingHorizontal: 30,
       alignSelf: 'center',
       height: 'auto',
       width: '90%',
@@ -298,6 +302,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
 
     const defaultModalInnerContainerStyle = {
       backgroundColor: 'white',
+      paddingHorizontal: 30,
     }
 
     const viewProps: ViewProps = {

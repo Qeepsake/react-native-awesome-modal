@@ -25,6 +25,7 @@ export interface IProps {
     modalInnerContainerStyle?: StyleProp<ViewStyle>;
     modalOverlayStyle?: StyleProp<ViewStyle>;
     modalRef?: (ref: AwesomeModal | undefined) => void;
+    isCentered?: boolean;
 }
 export declare class AwesomeModal extends React.Component<IProps, IState> {
     scrollViewRef: RefObject<ScrollView>;
@@ -34,6 +35,7 @@ export declare class AwesomeModal extends React.Component<IProps, IState> {
         overflowShow: boolean;
         closeOnPressOutside: boolean;
         modalBottomMargin: number;
+        isCentered: boolean;
     };
     constructor(props: IProps);
     componentDidMount(): Promise<void>;
