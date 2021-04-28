@@ -1,6 +1,6 @@
 {
   "name": "react-native-awesome-modal",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "description": "A flexible and reusable modal.",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
