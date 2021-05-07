@@ -116,7 +116,8 @@ export class AwesomeModal extends React.Component<IProps, IState> {
 
   componentDidUpdate(prevProps: IProps, prevState: IState) {
     if (
-      prevState.modalHeight !== this.state.modalHeight ||
+      (prevState.modalHeight !== this.state.modalHeight &&
+        Math.abs(prevState.modalHeight - this.state.modalHeight) > 1) ||
       prevProps !== this.props
     ) {
       SafeArea.getSafeAreaInsetsForRootView().then((insets) => {
