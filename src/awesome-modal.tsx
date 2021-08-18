@@ -80,7 +80,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     this.state = {
       modalHeight: 0,
       opacityAnimation: new Animated.Value(0),
-      translateYAnimation: new Animated.Value(DEVICE_HEIGHT * -1.5),
+      translateYAnimation: new Animated.Value(DEVICE_HEIGHT * 1.5),
       modalYPosition: props.modalBottomMargin ?? 0 + yPositionBottomMargin,
       deviceHeight: DEVICE_HEIGHT,
       overlayIsVisible: true,
@@ -91,9 +91,8 @@ export class AwesomeModal extends React.Component<IProps, IState> {
     this.onTouchOutside = this.onTouchOutside.bind(this)
     this.close = this.close.bind(this)
     this.onModalHeightChange = this.onModalHeightChange.bind(this)
-    this.onSafeAreaInsetsForRootViewChange = this.onSafeAreaInsetsForRootViewChange.bind(
-      this
-    )
+    this.onSafeAreaInsetsForRootViewChange =
+      this.onSafeAreaInsetsForRootViewChange.bind(this)
   }
 
   async componentDidMount() {
@@ -169,9 +168,9 @@ export class AwesomeModal extends React.Component<IProps, IState> {
         useNativeDriver: true,
       }),
       Animated.timing(translateYAnimation, {
-        toValue: this.state.deviceHeight * -1.5,
+        toValue: this.state.deviceHeight * 1.5,
         duration: 250,
-        useNativeDriver: false,
+        useNativeDriver: true,
       }),
     ]).start(() => {
       this.setState(() => {
@@ -194,12 +193,7 @@ export class AwesomeModal extends React.Component<IProps, IState> {
    * the application.
    */
   onModalHeightChange() {
-    const {
-      modalHeight,
-      opacityAnimation,
-      translateYAnimation,
-      modalYPosition,
-    } = this.state
+    const { modalHeight, opacityAnimation, translateYAnimation } = this.state
 
     if (modalHeight !== 0) {
       Animated.parallel([
@@ -211,8 +205,8 @@ export class AwesomeModal extends React.Component<IProps, IState> {
         Animated.spring(translateYAnimation, {
           toValue: this.props.isCentered
             ? (DEVICE_HEIGHT - modalHeight) / 2
-            : modalYPosition,
-          useNativeDriver: false,
+            : DEVICE_HEIGHT - modalHeight,
+          useNativeDriver: true,
         }),
       ]).start()
     }
@@ -345,7 +339,11 @@ export class AwesomeModal extends React.Component<IProps, IState> {
             })
           }}
           style={[
-            { bottom: this.state.translateYAnimation as any },
+            {
+              transform: [
+                { translateY: this.state.translateYAnimation as any },
+              ],
+            },
             defaultModalContainerStyle,
             modalContainerStyle,
           ]}
